@@ -113,23 +113,6 @@ public class GamePanel extends JPanel implements Runnable{
         g2.setColor(Color.white);
         g2.fillOval(plrX, plrY, tileSize, tileSize);
         
-        for(int row = 0; row < Map.mapData.length; row++){
-    for(int col = 0; col < Map.mapData[0].length; col++){
-
-        int tile = Map.mapData[row][col];
-
-        int x = col * tileSize;
-        int y = row * tileSize;
-
-        if(tile == 1){
-            g2.setColor(Color.gray); // WALL
-        } else {
-            g2.setColor(Color.black); // FLOOR
-        }
-
-        g2.fillRect(x, y, tileSize, tileSize);
-    }
-}
 
         g2.dispose();
     }
